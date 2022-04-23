@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+:root {
+    --mainText: black;
+    --secondaryText: #4b5156;
+    --mainColor: #eaeaea;
+    --secondaryColor: #fff;
+    --borderColor: #c1c1c1;
+    --themeBorderLight: #fff;
+    --themeBorderDark: #02022b;
+    --previewBackground: rgba(251, 249, 243, 0.8);
+    --previewShadow: rgb(224, 176, 237, 0.5);
+}
+
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--mainText);
+    font-weight: 500;
+}
+
+p, span, label, input, textarea {
+    color: var(--secondaryText)
+}
+
+a {
+    text-decoration: none;
+    color: #1782b8;
+}
+
+li {
+    list-style: none;
+    padding: 5px;
+}
+
+h1{font-size: 46px;}
+h2{font-size: 36px;}
+h3{font-size: 28px}
+h4{font-size: 24px;}
+h5{font-size: 20px;}
+h6{font-size: 16px;}
+
+.s1 {
+    background-color: var(--mainColor);
+    border-bottom: 1px solid var(--borderColor);
+    overflow: auto;
+}
+.s2 {
+    background-color: var(--secondaryColor);
+    border-bottom: 1px solid var(--borderColor);
+    overflow: auto;
+}
+.s3 {
+    background-color: var(--mainColor);
+    border-bottom: 1px solid var(--borderColor);
+}
+
+
+.mainContainer {
+    max-width: 1100px;
+    margin: 0 auto;
+
+}
+
+.Greetings{
+    display: grid;
+   
+    text-align: center;
+    align-items: center;
+    min-height: 10em;
+}
+
+.introWrapper{
+    background-color: var(--secondaryColor);
+    border: 1px solid var(--borderColor);
+    border-radius: 5px 5px 0 0;
+    box-shadow: 9px 20px 65px -20px rgba(0,0,0,0.75);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3em 30em;
+}
+
+.navWrapper{
+    background-color: var(--mainColor);
+    border-bottom: 1px solid var(--borderColor);
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.dotWrapper {
+    display: flex;
+}
+
+.browser-dot{
+    background-color: black;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    box-shadow:  9px 20px 65px -20px rgba(0,0,0,0.75); 
+}
+
+#dot-1{
+    background-color: #ec1919;
+}
+#dot-2{
+    background-color: #e2e246;
+}
+#dot-3{
+    background-color: #31a231;
+}
+
+#navigation li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.leftColumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftColumn img {
+    width: 200px;
+    border-radius: 5px;
+    box-shadow:  9px 20px 65px -20px rgba(0,0,0,0.75); 
+    border: 2px solid #0d0d48;
+}
+
+.theme-dot{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color:#0d0d48;
+    display: inline-block;
+    margin: 0 5px;
+    border: 3px solid var(--themeBorderDark);
+    cursor: pointer;
+    box-shadow:  9px 20px 65px -20px rgba(0,0,0,0.75); 
+}
+
+.theme-dot:hover{
+    transform: scale(1.04);
+}
+
+#light{
+    background-color: white;
+}
+
+#dark {
+    background-color: #0d0d48;
+}
+
+
+
+.rightColumn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#preview {
+    width: 300px;
+    border: 2px solid #1782b8;
+    text-align: center;
+    padding: 5px; 
+    background-color: var(--previewBackground);
+    position: relative;
+    box-shadow: -37px -53px 5px -5px var(--previewShadow);
+}
+
+#preview p {
+    color: #4b5156;
+}
+
+#preview h3 {
+    color: black
+}
+
+.corner {
+    background-color: #fff;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 2px solid #1782b8;
+    position: absolute;
+}
+
+#tr {
+    top: -5px;
+    right: -5px;
+}
+#tl {
+    top: -5px;
+    left: -5px;
+}
+#bl {
+    bottom: -5px;
+    left: -5px;
+}
+#br {
+    bottom: -5px;
+    right: -5px;
+}
+
+.about-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    padding: 50px 0;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--secondaryText);
+    background-color: var(--previewShadow);
+    padding: 10px;
+    align-items: center;
+}
+
+.social-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links img {
+    width: 400px;
+    box-shadow: 9px 20px 65px -20px rgba(0,0,0,0.75);
+}
+
+.social-links a {
+  text-align: center;
+    display: inline-block;
+  margin: 5px 10px;
+}
+
+.social-links a:hover{
+    transform: scale(1.04);
+}
+
+.projects-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 320px );
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 0;
+   
+    
+}
+
+.project img {
+    width: 100%;
+}
+
+.project {
+    
+    border: 1px solid var(--borderColor);
+    box-shadow: 9px 20px 65px -20px rgba(0,0,0,0.75);
+}
+
+.post-preview{
+    background-color: #fff;
+    padding: 15px;
+    
+}
+.project p {
+    color: #4b5156;
+}
+
+.post-title {
+    color: black;
+    margin: 0;
+}
+
+.s4{
+    background-color: var(--secondaryColor);
+    height: 900px;
+}
+
+.s3 h3, .s4 h3 {
+    margin: 0 auto;
+    padding: 50px;
+}
+
+form {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid var(--borderColor);
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--mainColor);
+}
+
+label {
+    line-height: 2.7em;
+}
+input, textarea {
+    width: 90%;
+    padding: 10px;
+    background-color: var(--secondaryColor);
+    border-radius: 5px;
+    font-size: 14px;
+    border: 1px solid var(--borderColor);
+    margin: 10px auto; 
+}
+
+.btn {
+    color: #fff;
+    background-color: black;
+    width: 95%;
+    cursor: pointer;
+
+}
+
+
+@media screen and (max-width: 1200px) {
+   mainContainer{
+    width: 95%
+   }
+    
+}
+
+@media screen and (max-width: 800px) {
+  .introWrapper{
+    grid-template-columns: 1fr;
+    grid-template-rows: 3em 30em;
+}
+
+.navWrapper{
+  
+    grid-column: span 1;
+   
+}
+
+.leftColumn {
+    padding-bottom: 50px;
+}
+
+.rightColumn {
+    padding-bottom: 50px;
+}
+    
+}
+
+
+@media screen and (max-width: 640px) {
+   .skills {
+      margin-bottom: 50px;
+   }
+
+   .mainContainer {
+       margin: auto 20px;
+   }
+    
+}
